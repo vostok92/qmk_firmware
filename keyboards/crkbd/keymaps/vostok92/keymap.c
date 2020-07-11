@@ -194,7 +194,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         } else {
           layer_off(_ADJUST);
         }
-        return false;*/
+        return false;
     case RGB_MOD:
       #ifdef RGBLIGHT_ENABLE
         if (record->event.pressed) {
@@ -212,7 +212,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           RGB_current_mode = rgblight_config.mode;
         }
       #endif
-      break;
+      break;*/
     case VRSN:
       if (record->event.pressed) {
         SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);

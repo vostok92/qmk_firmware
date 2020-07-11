@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL_PD2
 
 #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
+#define TAPPING_TERM 200
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
@@ -83,7 +83,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
 #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
 #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
-#   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
+// #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
 #   define DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
 #   define DISABLE_RGB_MATRIX_SPLASH
 #   define DISABLE_RGB_MATRIX_MULTISPLASH
