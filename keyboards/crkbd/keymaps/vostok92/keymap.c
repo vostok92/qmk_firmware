@@ -82,21 +82,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-int RGB_current_mode;
+// int RGB_current_mode;
 
-void persistent_default_layer_set(uint16_t default_layer) {
-  eeconfig_update_default_layer(default_layer);
-  default_layer_set(default_layer);
-}
+// void persistent_default_layer_set(uint16_t default_layer) {
+//   eeconfig_update_default_layer(default_layer);
+//   default_layer_set(default_layer);
+// }
 
 // Setting ADJUST layer RGB back to default
-void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
-  if (IS_LAYER_ON(layer1) && IS_LAYER_ON(layer2)) {
-    layer_on(layer3);
-  } else {
-    layer_off(layer3);
-  }
-}
+// void update_tri_layer_RGB(uint8_t layer1, uint8_t layer2, uint8_t layer3) {
+//   if (IS_LAYER_ON(layer1) && IS_LAYER_ON(layer2)) {
+//     layer_on(layer3);
+//   } else {
+//     layer_off(layer3);
+//   }
+// }
 
 void matrix_init_user(void) {
     #ifdef RGBLIGHT_ENABLE
@@ -203,16 +203,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           RGB_current_mode = rgblight_config.mode;
         }
       #endif
-      return false;
+      return false;*/
     case RGBRST:
-      #ifdef RGBLIGHT_ENABLE
+      #ifdef RGB_MATRIX_ENABLE
         if (record->event.pressed) {
-          eeconfig_update_rgblight_default();
-          rgblight_enable();
-          RGB_current_mode = rgblight_config.mode;
+          eeconfig_update_rgb_matrix_default();
+          rgb_matrix_enable();
+          // RGB_current_mode = rgblight_config.mode;
         }
       #endif
-      break;*/
+      break;
     case VRSN:
       if (record->event.pressed) {
         SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
